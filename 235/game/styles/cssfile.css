@@ -1,0 +1,75 @@
+body {
+	background-color: lightblue;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	margin: 0 auto;
+	width: 80vw;
+}
+
+main {
+	background-color: skyblue;
+}
+
+main, footer {
+	border: 1px solid black;
+	margin: 0 auto;
+	width: 80vw;
+}
+
+h1 { 
+	color: red;
+	font-family: 'Press Start 2P', cursive;
+	border-bottom: 1px solid blue;
+	text-align: center;
+}
+
+h2 {
+	color: darkred;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 100px;
+}
+
+h3 {
+	color: darkred;
+	font-family: 'Open Sans', sans-serif;
+}
+
+p, ul, ol, blockquote {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+blockquote { 
+	background-color: lightgray;
+	padding: 1rem;
+}
+
+a:link {
+	color: seagreen;
+}
+
+a:visited {
+	color: green;
+}
+
+a:hover {
+	color: yellow;
+}
+
+a:active {
+	color: crimson;
+}
+
+.foot {
+	background-color: cornflowerblue;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+img.side {
+	float: right;
+	margin: 0 12px;
+	padding: 1rem;
+}
