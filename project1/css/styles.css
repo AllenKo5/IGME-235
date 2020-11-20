@@ -1,0 +1,188 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #aa0000;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2vw;
+}
+
+h1 {
+    font-size: 4vw;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+h3 {
+    font-size: 1.5vw;
+}
+
+a:link {
+    color: lightcoral;
+}
+
+a:visited {
+    color: crimson;
+}
+
+a:focus, a:hover, a:active{
+    color: blue;
+}
+
+nav {
+    position: fixed;
+    width: 10vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    
+}
+
+#logo {
+    width: 10vw;
+    height: auto;
+}
+
+.navsection {
+    padding: 1vw;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.project {
+    padding: 1vw 0 1vw 2vw;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+#wrapper {
+    display: grid;
+    width: 80vw;
+    margin-left: 15vw;
+    grid-template-rows: 3fr auto 1fr;
+    grid-template-areas: "header" "article" "footer";
+}
+
+#photo {
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 10%;
+}
+
+header {
+    grid-area: header;
+}
+
+article {
+    grid-area: article;
+}
+
+#abouttext {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#gallerywrapper {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1vw;
+}
+
+.galleryitem {
+    border: 5px solid #ffffff;
+    max-width: 100%;
+}
+
+#firstprojimg {
+    border: 5px solid #ffffff;
+    max-width: 100%;
+    grid-row: 4;
+    grid-column: 1;
+}
+
+#secondprojimg {
+    border: 5px solid #ffffff;
+    max-width: 100%;
+    grid-row: 5;
+    grid-column: 1;
+}
+
+#thirdprojimg {
+    border: 5px solid #ffffff;
+    max-width: 100%;
+    grid-row: 6;
+    grid-column: 1;
+}
+
+#firstprojtext {
+    color: #000000;
+    background-color: #ffffff;
+    border-left: 5px solid #ffffff;
+    grid-row: 4;
+    grid-column: 2/span 2;
+}
+
+#secondprojtext {
+    color: #000000;
+    background-color: #ffffff;
+    border-left: 5px solid #ffffff;
+    grid-row: 5;
+    grid-column: 2/span 2;
+}
+
+#thirdprojtext {
+    color: #000000;
+    background-color: #ffffff;
+    border-left: 5px solid #ffffff;
+    grid-row: 6;
+    grid-column: 2/span 2;
+}
+
+.info {
+    margin-top: 3vh;
+    margin-left: 50px;
+}
+
+footer {
+    grid-area: footer;
+    margin: auto;
+}
+
+@media screen and (max-width: 750px) {
+    h2 {
+        margin-left: 20px;
+    }
+    
+    nav {
+        width: 100vw;
+        height: 10vh;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+
+    #logo {
+        height: 10vh;
+        width: auto;
+    }
+
+    .navsection {
+        font-size: 1.5vw;
+    }
+    
+    .project {
+        font-size: 1.5vw;
+    }
+
+    #wrapper {
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

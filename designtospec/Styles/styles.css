@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+@font-face {
+    font-family: retro;
+    src: url(../Fonts/RetroComputer/retro_computer_personal_use.ttf);
+}
+
+@font-face {
+    font-family: dogica;
+    src: url(../Fonts/Dogica/TTF/dogicapixel.ttf);
+}
+
+html {
+    color: #ffffff;
+    background-color: #686868;
+    font-family: dogica;
+    min-width: 500px;
+}
+
+header, footer {
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 1.15em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    object-fit: scale-down;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    font-family: retro;
+}
+
+h1 img {
+    width: 15%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#top {
+    display: flex;
+    padding: 50px;
+    justify-content: space-evenly;
+}
+
+#treetext {
+    width: 40vw;
+    font-size: 1.2vw;
+    margin: 1vw;
+    padding: 1vw;
+    line-height: 1.15em;
+    background: #686868;
+}
+
+#tree {
+    width: 40vw;
+    margin: 1vw;
+    padding: 1vw;
+    background: linear-gradient(135deg, #e8fdf5 0%, #244d3e 100%);
+    border: 10px solid #ffffff;
+}
+
+#bottom {
+    display: grid;
+    margin-top: 50px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-areas: "plank planktext stick sticktext"
+                         "chest chesttext stair stairtext";
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    row-gap: 50px;
+}
+
+@media (max-width: 750px) {
+    #bottom {
+        grid-template-rows: repeat(4, 20%);
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "plank planktext"
+                             "stick sticktext"
+                             "chest chesttext"
+                             "stair stairtext";
+    }
+}
+
+.pic {
+    padding: 1vw;
+    width: 16vw;
+    height: 16vw;
+    margin: auto;
+    text-align: center;
+    border: 1vw solid #ffffff;
+    background-color: #324e44;
+    background-size: 12vw 12vw;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text {
+    font-size: 1.2vw;
+    line-height: 1.15em;
+    padding: 1vw;
+    width: 18vw;
+    height: 18vw;
+    background: #686868;
+}
+
+#plank {
+    grid-area: plank;
+    background-image: url('../Assets/planks.png');
+}
+
+#planktext {
+    grid-area: planktext;
+}
+
+#stick {
+    grid-area: stick;
+    background-image: url('../Assets/stick.png');
+}
+
+#sticktext {
+    grid-area: sticktext;
+}
+
+#chest {
+    grid-area: chest;
+    background-image: url('../Assets/chest.png');
+}
+
+#chesttext {
+    grid-area: chesttext;
+}
+
+#stair {
+    grid-area: stair;
+    background-image: url('../Assets/stairs.png');
+}
+
+#stairtext {
+    grid-area: stairtext;
+}
+
+#copyright {
+    float: right;
+    text-align: right;
+}
+
+#wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 20fr 3fr;
+    grid-template-areas: "header" "main" "footer";
+}
+
+@media screen and (max-width: 750px){
+    #wrapper {
+        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-areas: "header" "main" "footer";
+    }
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    background-color: #35363d;
+    padding-bottom: 50px;
+}
+
+footer {
+    grid-area: footer;
+    border-top: 10px solid #ffffff;
+    background-image: url('../Assets/trees.jpg');
+    background-size: cover;
+}

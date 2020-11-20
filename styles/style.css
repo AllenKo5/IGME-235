@@ -1,0 +1,68 @@
+body {
+	background-color: lightblue;
+	font-family: Arial, sans-serif;
+}
+
+header, main, footer {
+	border: 1px solid black;
+	margin: 0 auto;
+	width: 80vw;
+}
+
+main {
+	background-color: skyblue;
+}
+
+h1 {
+	color: darkred;
+	text-align: center;
+}
+
+h2 {
+	color: darkred;
+	font-family: 'VT323', monospace;
+}
+
+h2, p, ul {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.head {
+	background-color: rgb(120, 148, 202);
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.cross {
+	color: gray;
+	text-decoration: line-through;
+}
+
+#disclaimer {
+	margin-left: 50px;
+	font-size: 8px;
+}
+
+img#self {
+	width: 10em;
+	margin-left: 1em;
+	float: right;
+}
+
+a:link {
+	color: seagreen;
+}
+
+a:visited {
+	color: darkgreen;
+}
+
+a:hover {
+	color: yellow;
+}
+
+a:active {
+	color: crimson;
+}

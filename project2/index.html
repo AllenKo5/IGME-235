@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDH Commander Finder</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>EDH Commander Finder</h1>
+    </header>
+
+    <div id="wrapper">
+
+        <div id="cardname">
+            Name
+            <input id="searchterm" type="text" size="20" maxlength="50" autofocus>
+        </div>
+
+        <div id="colorid">
+            Color Identity
+            <select id="strictness">
+                <option value="exact">Exactly these colors</option>
+                <option value="including" selected>Including these colors</option>
+                <option value="atmost">At most these colors</option>
+            </select>
+            <div>
+                <input type="checkbox" id="white" class="color" name="white" value="w">
+                <label for="white">White</label>
+            </div>
+            <div>
+                <input type="checkbox" id="blue" class="color" name="blue" value="u">
+                <label for="blue">Blue</label>
+            </div>
+            <div>
+                <input type="checkbox" id="black" class="color" name="black" value="b">
+                <label for="black">Black</label>
+            </div>
+            <div>
+                <input type="checkbox" id="red" class="color" name="red" value="r">
+                <label for="red">Red</label>
+            </div>
+            <div>
+                <input type="checkbox" id="green" class="color" name="green" value="g">
+                <label for="green">Green</label>
+            </div>
+        </div>
+
+        <div id="mana">
+            Converted Mana Cost
+            <select id="manastrict">
+                <option value="less">Less than</option>
+                <option value="lessequal">Less than or equal to</option>
+                <option value="equal" selected>Exactly</option>
+                <option value="greater">Greater than</option>
+                <option value="greaterequal">Greater than or equal to</option>
+            </select>
+            <input id="manacost" type="text" size="20" maxlength="20" placeholder="Any value, e.g. '2'">
+        </div>
+
+        <div id="strategies">
+            Tribe
+            <select id="tribe">
+                <option value="none" selected>None</option>
+                <option value="angel">Angels</option>
+                <option value="cat">Cats</option>
+                <option value="dragon">Dragons</option>
+                <option value="eldrazi">Eldrazi</option>
+                <option value="elemental">Elementals</option>
+                <option value="elf">Elves</option>
+                <option value="goblin">Goblins</option>
+                <option value="human">Humans</option>
+                <option value="hydra">Hydras</option>
+                <option value="knight">Knights</option>
+                <option value="shapeshifter">Shapeshifters</option>
+                <option value="sliver">Slivers</option>
+                <option value="vampire">Vampires</option>
+                <option value="warrior">Warriors</option>
+                <option value="wizard">Wizards</option>
+                <option value="zombie">Zombies</option>  
+            </select>
+
+            Strategy
+            <select id="strat">
+                <option value="none" selected>None</option>
+                <option value="+1/+1">+1/+1 Counters</option>
+                <option value="-1/-1">-1/-1 Counters</option>
+                <option value="aristocrats">Aristocrats</option>
+                <option value="artifacts">Artifacts</option>
+                <option value="auras">Auras</option>
+                <option value="clones">Clones</option>
+                <option value="discard">Discard</option>
+                <option value="draw">Draw</option>
+                <option value="enchantments">Enchantments</option>
+                <option value="equip">Equipment</option>
+                <option value="flicker">Flicker</option>
+                <option value="flying">Flying</option>
+                <option value="lands">Lands</option>
+                <option value="legends">Legends</option>
+                <option value="mill">Mill</option>
+                <option value="reborn">Reanimator</option>
+                <option value="spells">Spellslinger</option>
+            </select>
+        </div>
+
+        <button id="search">Find a Commander!</button>
+    </div>
+
+    <div id="status">Ready to Search!</div>
+
+    <div id="content">
+        <p>No data yet!</p>
+    </div>
+
+    <footer>
+        &copy; Allen Ko 2020
+        <br>
+        Made using <b><a href="https://scryfall.com/">Scryfall</a></b>
+    </footer>
+</body>
+
+</html>

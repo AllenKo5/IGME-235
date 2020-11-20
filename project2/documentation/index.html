@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 Documentation</title>
+</head>
+
+<body>
+    <p>
+        This site was made using the <a href="https://scryfall.com/docs/api">Scryfall API</a>, although it originally started out using the MTG API. The original issue I had there was that the search terms that the MTG API used didn't line up very well with the parameters I wanted. Additionally, the MTG API doesn't seem to be updated as often as Scryfall's. I ran into a situation where the list returned by the MTG API had multiple printings of the same card in different sets, and some of them had image URLs while others did not, leading to problems like duplicate cards and missing cards. Because of this, switching over to Scryfall was much more convenient, especially since the search functioned similarly to just using the site. Since I have knowledge of how to search for specific options after having used the site myself, translating it over to the project was relatively simple.
+    </p>
+
+    <p>
+        The final project takes in five possible parameters, all of which can be empty and still function properly (in this case, it returns all of the cards in the game that can be your commander). It will return all of the cards that fit into the desired parameters, some of which have different cases themselves (such as color identity and converted mana cost). It provides a picture of each of those cards, which are also clickable links that lead to that card's Scryfall entry. The tribe and strategy parts were later additions that were sort of hard-coded in, and they return whatever cards have synergy wth that tribe or strategy, although not all of them will be accurate. For example, if you select the Human tribe, the top results are cards that have "human" in their text but don't actually synergize with Humans. I tried to cut out a lot of those cases but didn't want to just curate every single list, so I was limited a little in that aspect.
+    </p>
+
+    <p>
+        Personally, I feel like I did a really good job with this project and that it's worth an A. I have all of the requirements for the project, such as browser local storage with the last name that the user searched for in the name field. There are a total of 5 controls that the user can interact with, and the page si responsive in terms of telling you what state it is in at all times. The only "error" I found was a 404 error when the search parameters didn't return an existing card, but from my understanding that isn't something that has an elegant solution. The site is responsive and also has a vertical layout for mobile that is readable, and I would say
+        that the site design looks nice as well. There is minor use of Flexbox and Grid to make things look good, such as the way the checkbox for colors are laid out and the way the results are returned.
+    </p>
+
+    <p>
+        All pictures are taken from the Scryfall API.
+    </p>
+</body>
+
+</html>

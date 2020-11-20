@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Pokemon NPC's Wise Words</title>
+    <style>
+        @font-face {
+            font-family: "Pokemon RBYGSC";
+            src: url("media/PKMN RBYGSC.ttf");
+        }
+
+        body {
+            background-color: #1f497a;
+            font-family: "Pokemon RBYGSC", cursive;
+            font-size: 1.2vw;
+            margin: 0;
+        }
+
+        h1 {
+            color: #ffffff;
+            background-color: #1f497a;
+            text-align: center;
+        }
+
+        #background {
+            width: 40%;
+            height: 30vw;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: url("media/npc.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        #quoteText {
+            position: absolute;
+            margin-top: 24vw;
+            width: 34%;
+            margin-left: 2vw;
+            text-align: left;
+        }
+
+        #reloadButton {
+            color: #ffffff;
+            background-color: #547d0c;
+            border: 2px solid #2c4206;
+            width: 100px;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+            text-align: center;
+            position: relative;
+            left: 50%;
+            -ms-transform: translate(-50%);
+            transform: translate(-50%);
+            transition-duration: 0.3s;
+        }
+
+        #reloadButton:hover {
+            background-color: #b8f562;
+            color: #000000;
+        }
+
+        #reloadButton:active {
+            background-color: #2c4206;
+            color: #ffffff;
+        }
+
+        footer {
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>A Pokemon NPC's Wise Words</h1>
+    </header>
+
+    <section id="background">
+        <p id="quoteText">
+            Placeholder Text
+        </p>
+    </section>
+
+    <button id="reloadButton">
+        Reload
+    </button>
+
+    <footer>&copy; Allen Ko 2020</footer>
+
+    <script>
+        "use strict";
+
+        let backgound = document.querySelector("#background");
+        let button = document.querySelector("#reloadButton");
+        let para = document.querySelector("#quoteText");
+
+        let quotes = ["I think, sometimes, one has to make mistakes to learn what is right.",
+            "If you lose sight of yourself, that's when you're set to lose.",
+            "Wasting money is bad, but wasting time is worse! Because there are some things that can only be done now!",
+            "Strength is not in the size of a body. It's in the size of the heart!",
+            "Even if you're proceeding slowly, keep walking. If you do, you'll reach your dream.",
+            "You know how Pokemon have different abilities? People are like that too. Everyone has different potential.",
+            "You can make all the preparations in the world but if it doesn't work it doesn't work.",
+            "Go to many places, speak to many people and good things will happen to you.",
+            "I don't reminisce over yesterday, I don't think about tomorrow. I only live today to the fullest. That's my policy!",
+            "Knowing something and being able to do something seem pretty similar, but they can be very different.",
+            "If we live a monotonous life do we get used to it and stop thinking about changing it?",
+            "Don't ever doubt yourself because of what people say or the times!",
+            "Losing feels insignificant - if you look up at the sky!",
+            "I like shorts. They're comfy and easy to wear!"];
+
+        let displayQuote = () => {
+            let randomIndex = Math.floor(Math.random() * Math.floor(quotes.length));
+            document.querySelector("#quoteText").innerHTML = quotes[randomIndex];
+        }
+
+        window.onload = displayQuote();
+        button.addEventListener("click", displayQuote);
+
+    </script>
+</body>
+
+</html>

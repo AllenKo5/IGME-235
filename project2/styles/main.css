@@ -1,0 +1,103 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    font-size: 3vw;
+    background-color: #2b253a;
+    color: white;
+}
+
+#wrapper {
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #2b253a;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#colorid {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1vw;
+}
+
+#strategies {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1vw;
+}
+
+button {
+    display: inline-block;
+	cursor: pointer;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+    background: #ff6347;
+    color: white;
+    padding: 10px;
+    width: 70%;
+}
+
+button:hover {
+    background: #ef4836;
+    transition-duration: 0.4s;
+}
+
+button:active {
+    background: #f22613;
+    border-color: white;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#status {
+    padding: 10px;
+    text-align: center;
+}
+
+#content {
+    margin: 10px auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: space-evenly;
+    gap: 40px 30px;
+}
+
+footer {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.cardimage {
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    #colorid {
+        flex-direction: column;
+    }
+
+    #strategies {
+        flex-direction: column;
+    }
+
+    #mana {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
